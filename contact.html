@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./stylesheet.css" rel="stylesheet">
+    <title>My portfolio-contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!--header-->
+  <header>
+    <h2>Mena Pedante</h2>
+
+    <nav>
+      <ul>
+        <li><a class="navbar" href="index.html">About</a></li>
+        <li><a class="navbar" href="index.html">Projects</a></li>
+        <li><a class="navbar" href="index.html">Skills</a></li>
+        <li><a class="navbar-button" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <p class="description">Front end developer</p>
+ 
+  <!--main-->
+  <main>
+    <section id="contact">
+      <h3 class="contact-heading">Contacts</h3>
+      <p class="contact-parag">Have an interesting projects,question or proposal?</p>
+      <p class="contact-parag2">Contact me!</p>
+      
+      <div class="articles-logo">
+        <article>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pedantemena@gmail.com" target="_blank">
+        <img src="./resources/4202011_email_gmail_mail_logo_social_icon.png" alt="gmail logo" width="40" height="40">
+        </a>
+        </article>
+
+        <article>
+        <a href="https://www.linkedin.com/in/mena-pedante-7b509519a/" target="_blank">
+        <img src="./resources/317750_linkedin_icon.png" alt="linkedin logo" width="40" height="40">
+        </a>
+        </article>
+
+        <article>
+        <a href="https://github.com/P-Mena">
+        <img src="./resources/394187_github_icon.png" alt="github icon" width="40" height="40">
+        </a>
+        </article>
+      </div>
+    </section>  
+
+      <section id="quotes">
+        <h3 class="quotes-heading">To encourage you!</h3>
+        <p class="quotes-parag">If you're considering a career change and perhaps you're interested in entering the world of programming, try clicking the button below. I've created some motivational phrases to encourage you to embark on this new journey.</p>
+        
+      </section>
+
+      <div id="motivationalQuotes">
+        <div id="output">"The secret to getting what you want is to start doing something to achieve it."</div>
+        <button id="quotes-btn">New encouragment!</button>
+       
+      </div>
+
+   
+  </main>
+
+
+
+    
+  <script>
+    const value = new URLSearchParams(window.location.search).get('data');
+    console.log(value);
+
+    const btn = document.getElementById("quotes-btn");
+    const output = document.getElementById("output");
+    
+    let quotes = [
+    '"Every new challenge is an opportunity for growth and learning."',
+    '"There is no success without obstacles. Every failure is a step closer to success."',
+    '"Today is determination is tomorrow is success."',
+    '"Your only limitation is the one you impose on yourself."',
+    '"Challenges are what make life interesting. Overcoming them is what makes life meaningful."',
+    ];
+
+     btn.addEventListener('click', function(){
+      let randomQuotes = quotes[Math.floor (Math.random () * quotes.length)];
+      output.innerHTML = randomQuotes;
+      
+
+     
+    });
+  
+    
+
+      
+
+     
+
+
+
+  </script>
+  <footer class="contact-footer">
+    <p class="footer-parag">&copy; 2024 Personal Portfolio </p>
+  </footer>
+</body>
+
+</html>
